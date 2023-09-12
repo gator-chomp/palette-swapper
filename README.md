@@ -16,10 +16,10 @@ A description of the project and overview of use.
 
 ## Authors
 
-Jesse Allen
-Sufia Rashid
-Robert Smith
-Gong Bing Wong
+Jesse Allen  
+Sufia Rashid  
+Robert Smith  
+Gong Bing Wong  
 
 ## Version History
 
