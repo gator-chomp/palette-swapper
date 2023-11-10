@@ -36,6 +36,7 @@ def sign_up():
     if request.method == 'POST':
         email = request.form.get('email')
         firstName = request.form.get('firstName')
+        lastName = request.form.get('lastName')
         password1 = request.form.get('password1')
         password2 = request.form.get('password2')
 
@@ -46,12 +47,14 @@ def sign_up():
             flash('Email must be atleast 5 characters', category='error')
         elif len(firstName) < 2:
             flash('first name must be atleast 2 characters', category='error')
+        elif len(lastName) < 2:
+            flash('last name must be atleast 2 characters', category='error')
         elif password1 != password2:
             flash('passwords do not match', category='error')
         elif len(password1) < 8:
             flash('password must be atleast 8 characters', category='error')
         else:
-            new_user = User(email=email,firstName=firstName,password=generate_password_hash(password1, method='scrypt'))
+            new_user = User(email=email,firstName=firstName,lastName=lastName,password=generate_password_hash(password1, method='scrypt'))
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
