@@ -11,6 +11,11 @@ A description of the project and overview of use.
 ### Dependencies
 
 ### Installing
+git clone https://github.com/gator-chomp/palette-swapper.git
+pip install -r requirements.txt
+flask --app main.py run
+(if issues with access to local host, try different port number)
+ex) flask --app main.py run -h localhost -p 3000
 
 ## Help
 
