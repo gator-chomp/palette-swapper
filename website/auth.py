@@ -17,7 +17,7 @@ def login():
             if check_password_hash(user.password, password1):
                 flash('Logged in successfully!', category='success')
                 login_user(user, remember=True)
-                return redirect(url_for('views.home'))
+                return redirect(current_user.logoutPage)
             else:
                 flash('Incorrect password.', category='error')
         else:
@@ -54,7 +54,7 @@ def sign_up():
         elif len(password1) < 8:
             flash('Password must be at least 8 characters.', category='error')
         else:
-            new_user = User(email=email,firstName=firstName,lastName=lastName,password=generate_password_hash(password1, method='scrypt'))
+            new_user = User(email=email,firstName=firstName,lastName=lastName,password=generate_password_hash(password1, method='scrypt'), logoutPage = request.url)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
