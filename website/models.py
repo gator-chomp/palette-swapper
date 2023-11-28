@@ -7,3 +7,4 @@ class User(db.Model, UserMixin):
     password = db.Column(db.String(150))
     firstName = db.Column(db.String(150))
     lastName = db.Column(db.String(150))
+    logoutPage = db.Column(db.String(150))
