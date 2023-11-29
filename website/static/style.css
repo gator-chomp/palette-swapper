@@ -128,3 +128,9 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
