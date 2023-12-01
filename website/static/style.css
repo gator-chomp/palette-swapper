@@ -134,8 +134,8 @@
     color: rgb(14, 14, 14);
     background: linear-gradient(
         60deg,
-        rgb(255, 255, 255),
-        rgb(255, 255, 0)
+        rgb(153, 204, 255),
+        rgb(0, 102, 204)
       );
     font-size:larger;
     font-family: 'Times New Roman', Times, serif;
@@ -151,8 +151,8 @@
     color: rgb(0, 0, 133);
     background: linear-gradient(
         60deg,
-        rgb(255, 255, 255),
-        rgb(229, 255, 0)
+        rgb(153, 204, 255),
+        rgb(0, 102, 204)
       );
     font-size:medium;
     font-family: 'Times New Roman', Times, serif;
