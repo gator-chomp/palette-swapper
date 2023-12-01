@@ -128,3 +128,35 @@
     -webkit-border-radius: 10px;
     border-radius: 10px;
   }
+
+  t3 {
+    padding: 2px 30px;
+    color: rgb(14, 14, 14);
+    background: linear-gradient(
+        60deg,
+        rgb(255, 255, 255),
+        rgb(255, 255, 0)
+      );
+    font-size:larger;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 500;
+    text-align-last: center;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .by {
+    padding: 6px;
+    color: rgb(0, 0, 133);
+    background: linear-gradient(
+        60deg,
+        rgb(255, 255, 255),
+        rgb(229, 255, 0)
+      );
+    font-size:medium;
+    font-family: 'Times New Roman', Times, serif;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
