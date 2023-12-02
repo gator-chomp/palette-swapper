@@ -1,3 +1,4 @@
+   /* button colors and font */
    .bn29 {
     border: none;
     padding: 0.5em 1.5em;
@@ -12,6 +13,7 @@
     font-size: large;
     }
   
+    /* button transition after and before hover */
   .bn29:before,
   .bn29:after {
     position: absolute;
@@ -38,6 +40,7 @@
     );
   }
   
+  /* button format before hover */
   .bn29:before {
     -webkit-filter: blur(7px);
     filter: blur(7px);
@@ -47,11 +50,13 @@
     animation: pulse 10s infinite ease;
   }
   
+  /* button format before hover */
   .bn29:hover:before {
     width: 115%;
     height: 115%;
   }
 
+  /* paragraph formatting colors and font*/
   p {
     padding: 6px;
     color: rgb(0, 0, 133);
@@ -73,11 +78,13 @@
     border-radius: 5px;
   }
 
+  /* paragraph scaling after hovering */
   p:hover {
     transform: scale(1.1);
     transition: transform .5s;
   }
 
+  /* paragraph title colors for home page */
   t {
     padding: 2px 30px;
     color: rgb(217, 217, 217);
@@ -95,6 +102,7 @@
     border-radius: 10px;
   }
 
+  /* paragraph formatting colors and font for black and white page*/
  .q {
     padding: 6px;
     color: rgb(255, 255, 255);
@@ -107,11 +115,13 @@
     border-radius: 5px;
   }
 
+  /* paragraph scaling after hovering for black and white page*/
   .q:hover {
     transform: scale(1.1);
     transition: transform .5s;
   }
 
+  /* paragraph title colors for black and white page */
   t2 {
     padding: 2px 30px;
     color: rgb(14, 14, 14);
@@ -129,6 +139,7 @@
     border-radius: 10px;
   }
 
+  /* paragraph title colors for blue and yellow page */
   t3 {
     padding: 2px 30px;
     color: rgb(14, 14, 14);
@@ -146,6 +157,7 @@
     border-radius: 10px;
   }
 
+  /* paragraph formatting colors and font for blue and yellow page*/
   .by {
     padding: 6px;
     color: rgb(0, 0, 133);

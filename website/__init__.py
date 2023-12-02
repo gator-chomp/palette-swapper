@@ -1,3 +1,6 @@
+#basic file needed to run all elements of the app and return all
+#the code and logic from the files
+
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from os import path
@@ -12,8 +15,8 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
-    from .views import views
-    from .auth import auth
+    from .views import views  #import views
+    from .auth import auth #import auth
 
     app.register_blueprint(views, url_prefix = '/')
     app.register_blueprint(auth, url_prefix = '/')
