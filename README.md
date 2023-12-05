@@ -11,11 +11,11 @@ A description of the project and overview of use.
 ### Dependencies
 
 ### Installing
-git clone https://github.com/gator-chomp/palette-swapper.git
-pip install -r requirements.txt
-create a config.py file in the same directory as main.py
-add "import os" and "os.environ["SECRET_KEY"] = "YOUR_OWN_KEY"" with YOUR_OWN_KEY being what you set yourself.
-flask --app main.py run
+1. git clone https://github.com/gator-chomp/palette-swapper.git
+2. pip install -r requirements.txt
+3. create a config.py file in the same directory as main.py
+4. add "import os" and "os.environ["SECRET_KEY"] = "YOUR_OWN_KEY"" with YOUR_OWN_KEY being what you set yourself.
+5. flask --app main.py run
 (if issues with access to local host, try different port number)
 ex) flask --app main.py run -h localhost -p 3000
 
