@@ -3,25 +3,20 @@
 
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import os
+from os import path
 from flask_login import LoginManager
-from flask_wtf.csrf import CSRFProtect
-from config import *
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
 def create_app():
     app = Flask(__name__)
-    csrf = CSRFProtect()
-    csrf.init_app(app) 
-
-    app.config['SECRET_KEY'] = os.environ["SECRET_KEY"]
+    app.config['SECRET_KEY'] = 'cookies'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     db.init_app(app)
 
-    from .views import views  
-    from .auth import auth 
+    from .views import views  #import views
+    from .auth import auth #import auth
 
     app.register_blueprint(views, url_prefix = '/')
     app.register_blueprint(auth, url_prefix = '/')

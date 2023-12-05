@@ -26,6 +26,7 @@
     height: 105%;
     content: "";
     z-index: -2;
+    background-size: 400% 400%;
     background: linear-gradient(
       60deg,
       #f79533,
@@ -84,7 +85,7 @@
   }
 
   /* paragraph title colors for home page */
-  .t {
+  t {
     padding: 2px 30px;
     color: rgb(217, 217, 217);
     background: linear-gradient(
@@ -121,7 +122,7 @@
   }
 
   /* paragraph title colors for black and white page */
-  .t2 {
+  t2 {
     padding: 2px 30px;
     color: rgb(14, 14, 14);
     background: linear-gradient(
@@ -139,7 +140,7 @@
   }
 
   /* paragraph title colors for blue and yellow page */
-  .t3 {
+  t3 {
     padding: 2px 30px;
     color: rgb(14, 14, 14);
     background: linear-gradient(
@@ -170,8 +171,4 @@
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-  }
-
-  center {
-    text-align: center;
   }
