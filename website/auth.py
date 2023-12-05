@@ -26,8 +26,9 @@ def login():
                 flash('Incorrect password.', category='error') #if user is in system but password is wrong
         else:
             flash('Not a user.', category='error') #if user is not in system
-    
-    return render_template("login.html", user=current_user)
+        return render_template("login.html", user=current_user)
+    else:
+        return render_template("login.html", user=current_user)
 
 #function for logging out of the website
 @auth.route('/logout')
@@ -42,8 +43,8 @@ def sign_up():
     #based on the inputs put in by the user, add them to database variables
     if request.method == 'POST':
         email = request.form.get('email') #user input email added to email variable
-        firstName = request.form.get('firstName') #user first name email added to first name variable
-        lastName = request.form.get('lastName') #user last name email added to last name variable
+        first_name = request.form.get('firstName') #user first name email added to first name variable
+        last_name = request.form.get('lastName') #user last name email added to last name variable
         password1 = request.form.get('password1') #user password1 email added to password1 variable
         password2 = request.form.get('password2') #user password2 email added to password2 variable
 
@@ -52,20 +53,21 @@ def sign_up():
             flash('User already exists.', category='error')
         elif len(email) < 5: #if email is less then 5 characters long
             flash('Email must be at least 5 characters.', category='error')
-        elif len(firstName) < 2: #if name is less then 2 characters long
+        elif len(first_name) < 2: #if name is less then 2 characters long
             flash('First name must be at least 2 characters.', category='error')
-        elif len(lastName) < 2: #if name is less then 2 characters long
+        elif len(last_name) < 2: #if name is less then 2 characters long
             flash('Last name must be at least 2 characters.', category='error')
         elif password1 != password2: #if passwords do not match
             flash('Passwords do not match.', category='error')
         elif len(password1) < 8: #if passwords are too short
             flash('Password must be at least 8 characters.', category='error')
         else: #add user to database
-            new_user = User(email=email,firstName=firstName,lastName=lastName,password=generate_password_hash(password1, method='scrypt'), logoutPage = request.url)
+            new_user = User(email=email,firstName=first_name,lastName=last_name,password=generate_password_hash(password1, method='scrypt'), logoutPage = request.url)
             db.session.add(new_user)
             db.session.commit()
             login_user(new_user, remember=True)
             flash('Account created!', category='success')
             return redirect(url_for('views.home')) #take user to home page
-
-    return render_template("sign-up.html", user=current_user)
+        return render_template("sign-up.html", user=current_user)
+    else:
+        return render_template("sign-up.html", user=current_user)
